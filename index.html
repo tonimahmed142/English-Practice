@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Word Pronunciation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin:  0 10% 0 10%;
+        }
+        .count{
+          width: 100%;
+          height: auto;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+        .count-item1, .count-item2 {
+          display: inline-block;
+          text-align: center;
+          padding: 10px;
+        }
+        .display-item{
+          display: flex;
+          justify-content: center;
+          height: auto;
+          width: 100%;
+          margin-top: 20px;
+        }
+        button{
+          margin: 10px;
+          padding:20px;
+          background-color: rgb(128, 179, 255);
+          border-radius: 20px;
+          cursor: pointer;
+          color: #ff0000;
+          border: none;
+        }
+        button:hover {
+
+        }
+        .wordDisplay {
+          font-size: 30px;
+          color: red;
+          text-decoration: underline;
+          text-align: center;
+        }
+        .display-items{
+          display: inline-block;
+        }
+        @media screen  and (max-width: 768px) {
+          body{
+            margin:  0 5% 0 5%;
+          }
+          
+        }
+        h1{
+          text-align: center;
+        }
+        .word-body {
+          height: auto;
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          
+        }
+        .word-box {
+            display: inline-block;
+            text-transform: capitalize;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border: 2px solid #333;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 10px;
+            width: 200px;
+        }
+        p{
+         text-align: center;
+         color: #646464;
+        }
+    </style>
+</head>
+<body>
+  <div class="try-yourself">
+    <h1>If there are any issues, please tell me!</h1>
+    <p>"This site will help you pronounce words and commit those words to memory."(just click on the words)</p>
+    <div>
+<div class="count">
+    <div class="count-item1">
+      <label for="startIndex">Input start number:</label>
+      <input placeholder="First number" type="number" id="startIndex" min="1" max="1199" value="1">
+    </div>
+    <div class="count-item2">
+      <label for="endIndex">Input end number:</label>
+      <input placeholder="Last number" type="number" id="endIndex" min="2" max="1200" value="20">
+    </div>
+</div>
+    </div>
+<div class="display-item">
+<div class="display-items">
+  <div id="wordDisplay" class="wordDisplay"></div>
+  <button class="trybtn" id="tryBtn">Try Yourself >>></button>
+  <button class="stopbtn" id="stopBtn">Stop</button>
+</div>
+</div>
+  </div>
+  <div class="word-body">
+   <div class="word-box" onclick="speakWord('potent')"> 
+      1. potent = শক্তিশালী 
+    </div>
+    <div class="word-box" onclick="speakWord('placid')"> 
+      2. placid = শান্ত 
+    </div>
+    <div class="word-box" onclick="speakWord('gigantic')"> 
+      3. gigantic = বিশাল 
+    </div>
+    <div class="word-box" onclick="speakWord('mundane')"> 
+      4. mundane = গতানুগতিক 
+    </div>
+    <div class="word-box" onclick="speakWord('tiring')"> 
+      5. tiring = ক্লান্তিকর 
+    </div>
+    <div class="word-box" onclick="speakWord('extol')"> 
+      6. extol = প্রশংসা করা 
+    </div>
+    <div class="word-box" onclick="speakWord('coercion')"> 
+      7. coercion = জবরদস্তি 
+    </div>
+    <div class="word-box" onclick="speakWord('sooth')"> 
+      8. soothe = সান্ত্বনা দেওয়া 
+    </div>
+    <div class="word-box" onclick="speakWord('prudent')"> 
+      9. prudent = বিচক্ষণ 
+    </div>
+    <div class="word-box" onclick="speakWord('repudiate')"> 
+      10. repudiate = অস্বীকার করা 
+    </div>
+    <div class="word-box" onclick="speakWord('meager')"> 
+      11. meager = অল্প 
+    </div>
+    <div class="word-box" onclick="speakWord('fragile')"> 
+      12. fragile = ভঙ্গুর 
+    </div>
+    <div class="word-box" onclick="speakWord('flimsy')"> 
+      13. flimsy = পাতলা 
+    </div>
+    <div class="word-box" onclick="speakWord('comply')"> 
+      14. comply = মেনে চলা 
+    </div>
+    <div class="word-box" onclick="speakWord('boisterous')"> 
+      15. boisterous = হৈচৈপূর্ণ 
+    </div>
+    <div class="word-box" onclick="speakWord('tame')"> 
+      16. tame = বাধ্য 
+    </div>
+    <div class="word-box" onclick="speakWord('periderm')"> 
+      17. periderm = দৈনিক 
+    </div>
+    <div class="word-box" onclick="speakWord('chatty')"> 
+      18. chatty = আড্ডাবাজ 
+    </div>
+    <div class="word-box" onclick="speakWord('subside')"> 
+      19. subside = কমে যাওয়া 
+    </div>
+    <div class="word-box" onclick="speakWord('allay')"> 
+      20. allay = কমে যাওয়া 
+    </div>
+    <div class="word-box" onclick="speakWord('abridge')"> 
+      21. abridge = সংক্ষেপ করা 
+    </div>
+    <div class="word-box" onclick="speakWord('nadir')"> 
+      22. nadir = সর্বনিম্ন বিন্দু 
+    </div>
+    <div class="word-box" onclick="speakWord('pinnacle')"> 
+      23. pinnacle = সর্বচ্চ 
+    </div>
+    <div class="word-box" onclick="speakWord('ludicrous')"> 
+      24. ludicrous = হাস্যকর 
+    </div>
+    <div class="word-box" onclick="speakWord('temperate')"> 
+      25. temperate = মিতাচার 
+    </div>
+    <div class="word-box" onclick="speakWord('tricky')"> 
+      26. tricky = ধোঁকাবাজ 
+    </div>
+    <div class="word-box" onclick="speakWord('perturbed')"> 
+      27. perturbed = চিন্তিত 
+    </div>
+    <div class="word-box" onclick="speakWord('palatable')"> 
+      28. palatable = সুস্বাদু 
+    </div>
+    <div class="word-box" onclick="speakWord('homogenous')"> 
+      29. homogenous = সমজাতীয় 
+    </div>
+    <div class="word-box" onclick="speakWord('docile')"> 
+      30. docile = অনুগত 
+    </div>
+    <div class="word-box" onclick="speakWord('unwieldy')"> 
+      31. unwieldy = বেয়াড়া 
+    </div>
+    <div class="word-box" onclick="speakWord('cumbersome')"> 
+      32. cumbersome = ঝামেলা পূর্ণ 
+    </div>
+    <div class="word-box" onclick="speakWord('untenable')"> 
+      33. untenable = অরক্ষনীয় 
+    </div>
+    <div class="word-box" onclick="speakWord('fawner')"> 
+      34. fawner = চাটুকার 
+    </div>
+    <div class="word-box" onclick="speakWord('suppress')"> 
+      35. suppress = দমিয়ে রাখা 
+    </div>
+    <div class="word-box" onclick="speakWord('feasible')"> 
+      36. feasible = সম্ভবপর 
+    </div>
+    <div class="word-box" onclick="speakWord('insensate')"> 
+      <p>//italian language</p>
+      37. insensate = অনুভূতিহীন 
+    </div>
+    <div class="word-box" onclick="speakWord('unwary')"> 
+      38. unwary = অসাবধান 
+    </div>
+    <div class="word-box" onclick="speakWord('valor')"> 
+      39. valor = সাহস 
+    </div>
+    <div class="word-box" onclick="speakWord('wilt')"> 
+      40. wilt = শুকিয়ে যাওয়া 
+    </div>
+    <div class="word-box" onclick="speakWord('wrinkle')"> 
+      41. wrinkle = ভাজপড়া 
+    </div>
+    <div class="word-box" onclick="speakWord('zenith')"> 
+      42. zenith = শীর্ষবিন্দু 
+    </div>
+    <div class="word-box" onclick="speakWord('sycophant')"> 
+      43. sycophant = চাটুকার 
+    </div>
+    <div class="word-box" onclick="speakWord('timorous')"> 
+      44. timorous = ভীরু 
+    </div>
+    <div class="word-box" onclick="speakWord('sanguine')"> 
+      45. sanguine = আশাবাদী 
+    </div>
+    <div class="word-box" onclick="speakWord('longing')"> 
+      46. longing = তিব্র আকাঙ্ক্ষা 
+    </div>
+    <div class="word-box" onclick="speakWord('aversion')"> 
+      47. aversion = অনীহা 
+    </div>
+    <div class="word-box" onclick="speakWord('clumsy')"> 
+      48. clumsy = অপটু 
+    </div>
+    <div class="word-box" onclick="speakWord('adept')"> 
+      49. adept = দক্ষ 
+    </div>
+    <div class="word-box" onclick="speakWord('reputable')"> 
+      50. reputable = সুখ্যাত 
+    </div>
+    <div class="word-box" onclick="speakWord('mild')"> 
+      51. mild = কোমল  
+    </div>
+    <div class="word-box" onclick="speakWord('impertinent')"> 
+      52. impertinent = অপ্রাসঙ্গিক  
+    </div>
+    <div class="word-box" onclick="speakWord('paradigm')"> 
+      53. paradigm = আদর্শ  
+    </div>
+    <div class="word-box" onclick="speakWord('corrosive')"> 
+      54. corrosive = ক্ষয় কারক  
+    </div>
+    <div class="word-box" onclick="speakWord('rigid')"> 
+      55. rigid = শক্ত  
+    </div>
+    <div class="word-box" onclick="speakWord('estrange')"> 
+      56. estrange = বিচ্ছিন্ন করা  
+    </div>
+    <div class="word-box" onclick="speakWord('pitfall')"> 
+      57. pitfall = অপ্রত্যাশিত বাধা  
+    </div>
+    <div class="word-box" onclick="speakWord('biased')"> 
+      58. biased = পক্ষপাতদুষ্ট  
+    </div>
+    <div class="word-box" onclick="speakWord('depravity')"> 
+      59. depravity = বিকৃত রুচি
+    </div>
+    <div class="word-box" onclick="speakWord('conclusive')"> 
+      60. conclusive = চূড়ান্ত  
+    </div>
+    <div class="word-box" onclick="speakWord('pithy')"> 
+      61. pithy = সংক্ষিপ্ত 
+    </div>
+    <div class="word-box" onclick="speakWord('insipid')"> 
+      62. insipid = নিরস  
+    </div>
+    <div class="word-box" onclick="speakWord('inebriated')"> 
+      63. inebriated = মাতাল  
+    </div>
+    <div class="word-box" onclick="speakWord('numerous')"> 
+      64. numerous = প্রচুর  
+    </div>
+    <div class="word-box" onclick="speakWord('tribulation')"> 
+      65. tribulation = মানসিক যন্ত্রণা  
+    </div>
+    <div class="word-box" onclick="speakWord('inexorable')"> 
+      66. inexorable = অনিবার্য  
+    </div>
+    <div class="word-box" onclick="speakWord('ill-will')"> 
+      67. ill-will = অসদিচ্ছা
+    </div>
+    <div class="word-box" onclick="speakWord('infatuation')"> 
+      68. infatuation = মোহগ্রন্থ  
+    </div>
+    <div class="word-box" onclick="speakWord('repugnance')"> 
+      69. repugnance = স্থনা
+    </div>
+    <div class="word-box" onclick="speakWord('nonchalant')"> 
+      70. nonchalant = উদাসীন  
+    </div>
+    <div class="word-box" onclick="speakWord('exaggerate')"> 
+      71. exaggerate = অতিরঞ্জিত করা  
+    </div>
+    <div class="word-box" onclick="speakWord('husband')"> 
+      72. husband = মিতব্যয় করা
+    </div>
+    <div class="word-box" onclick="speakWord('pugnacious')"> 
+      73. pugnacious = ঝগড়াটে
+    </div>
+    <div class="word-box" onclick="speakWord('fatuous')"> 
+      74. fatuous = বোকা 
+    </div>
+    <div class="word-box" onclick="speakWord('impecunious')"> 
+      75. impecunious = দরিদ্র 
+    </div>
+    <div class="word-box" onclick="speakWord('revoke')"> 
+      76. revoke = বাতিল করা
+    </div>
+    <div class="word-box" onclick="speakWord('mandatory')"> 
+      77. mandatory = বাধ্যতামূলক 
+    </div>
+    <div class="word-box" onclick="speakWord('perilous')"> 
+      78. perilous = বিপদজনক 
+    </div>
+    <div class="word-box" onclick="speakWord('petty')"> 
+      79. petty = তুচ্ছ 
+    </div>
+    <div class="word-box" onclick="speakWord('monotonous')"> 
+      80. monotonous = একঘেয়ে 
+    </div>
+    <div class="word-box" onclick="speakWord('inhibit')"> 
+      81. inhibit = বাধা দেয়া
+    </div>
+    <div class="word-box" onclick="speakWord('novel')"> 
+      82. novel = নতুন 
+    </div>
+    <div class="word-box" onclick="speakWord('sordid')"> 
+      83. sordid = নোংরা 
+    </div>
+    <div class="word-box" onclick="speakWord('spurious')"> 
+      84. spurious = ভেজাল
+    </div>
+    <div class="word-box" onclick="speakWord('instigate')"> 
+      85. instigate = উস্কানি দেওয়া
+    </div>
+    <div class="word-box" onclick="speakWord('surmise')"> 
+      86. surmise = অনুমান 
+    </div>
+    <div class="word-box" onclick="speakWord('fussy')"> 
+      87. fussy = খুঁতখুঁতে 
+    </div>
+    <div class="word-box" onclick="speakWord('massive')"> 
+      88. massive = বিশাল 
+    </div>
+    <div class="word-box" onclick="speakWord('parsimonious')"> 
+      89. parsimonious = মিতব্যয়ী
+    </div>
+    <div class="word-box" onclick="speakWord('economical')"> 
+      90. economical = মিতব্যয়ী
+    </div>
+    <div class="word-box" onclick="speakWord('appreciate')"> 
+      91. appreciate = প্রশংসা করা 
+    </div>
+    <div class="word-box" onclick="speakWord('congruent')"> 
+      92. congruent = সদৃশ
+    </div>
+    <div class="word-box" onclick="speakWord('tiny')"> 
+      93. tiny = ছোট 
+    </div>
+    <div class="word-box" onclick="speakWord('concur')"> 
+      94. concur = একমত 
+    </div>
+    <div class="word-box" onclick="speakWord('stocky')"> 
+      95. stocky = মোট 
+    </div>
+    <div class="word-box" onclick="speakWord('defend')"> 
+      96. defend = জয় করা  
+    </div>
+    <div class="word-box" onclick="speakWord('defeat')"> 
+      97. defeat = পরাজিত করা 
+    </div>
+    <div class="word-box" onclick="speakWord('extravagant')"> 
+      98. extravagant = অপব্যয়ী
+    </div>
+    <div class="word-box" onclick="speakWord('slender')"> 
+      99. slender = পাতলা 
+    </div>
+    <div class="word-box" onclick="speakWord('frugal')"> 
+      100. frugal = মিতব্যয়ী
+    </div>
+    <div class="word-box" onclick="speakWord('flippancy')"> 
+      101. flippancy = ফাজলামী 
+    </div>
+    <div class="word-box" onclick="speakWord('stingy')"> 
+      102. stingy = কৃপণ  
+    </div>
+    <div class="word-box" onclick="speakWord('scrupulous')"> 
+      103. scrupulous = খুঁতখুঁতে
+    </div>
+    <div class="word-box" onclick="speakWord('putative')"> 
+      104. putative = ধারণামূলক  
+    </div>
+    <div class="word-box" onclick="speakWord('vulgar')"> 
+      105. vulgar = অভদ্র
+    </div>
+    <div class="word-box" onclick="speakWord('guileless')"> 
+      106. guileless = ছলাকলা হীন 
+    </div>
+    <div class="word-box" onclick="speakWord('intoxicated')"> 
+      107. intoxicated = মাতাল  
+    </div>
+    <div class="word-box" onclick="speakWord('incompetent')"> 
+      108. incompetent = অদক্ষ  
+    </div>
+    <div class="word-box" onclick="speakWord('censure')"> 
+      109. censure = সমালোচনা  
+    </div>
+    <div class="word-box" onclick="speakWord('abortive')"> 
+      110. abortive = ব্যর্থ  
+    </div>
+    <div class="word-box" onclick="speakWord('obdurate')"> 
+      111. obdurate = একগুয়ে 
+    </div>
+    <div class="word-box" onclick="speakWord('indigent')"> 
+      112. indigent = দরিদ্র 
+    </div>
+    <div class="word-box" onclick="speakWord('archaic')"> 
+      113. archaic = প্রাচীন  
+    </div>
+    <div class="word-box" onclick="speakWord('pale')"> 
+      114. pale = ফ্যাকাসে 
+    </div>
+    <div class="word-box" onclick="speakWord('veracious')"> 
+      115. veracious = সত্যবাদী 
+    </div>
+    <div class="word-box" onclick="speakWord('sluggish')"> 
+      116. sluggish = নিস্তেজ 
+    </div>
+    <div class="word-box" onclick="speakWord('tardy')"> 
+      117. tardy = দীর্ঘ্য  
+    </div>
+    <div class="word-box" onclick="speakWord('verbose')"> 
+      118. verbose = শব্দবহুল  
+    </div>
+    <div class="word-box" onclick="speakWord('vex')"> 
+      119. vex = জ্বালাতন করা 
+    </div>
+    <div class="word-box" onclick="speakWord('irk')"> 
+      120. irk = বিরক্ত করা  
+    </div>
+    <div class="word-box" onclick="speakWord('chastise')"> 
+      121. chastise = তীব্র সমালোচনা 
+    </div>
+    <div class="word-box" onclick="speakWord('reproach')"> 
+      122. reproach = নিন্দা করা 
+    </div>
+    <div class="word-box" onclick="speakWord('reluctant')"> 
+      123. reluctant = অনিচ্ছুক 
+    </div>
+    <div class="word-box" onclick="speakWord('capture')"> 
+      124. capture = গ্রেফতার  
+    </div>
+    <div class="word-box" onclick="speakWord('stammer')"> 
+      125. stammer = তোতলানো 
+    </div>
+    <div class="word-box" onclick="speakWord('pallid')"> 
+      126. pallid = মলিন  
+    </div>
+    <div class="word-box" onclick="speakWord('importer')"> 
+      127. importer = ছলনাকারী  
+    </div>
+    <div class="word-box" onclick="speakWord('amass')"> 
+      128. amass = জয় করা  
+    </div>
+    <div class="word-box" onclick="speakWord('gallant')"> 
+      129. gallant = সাহসী  
+    </div>
+    <div class="word-box" onclick="speakWord('raucous')"> 
+      130. raucous = শ্রুতি কটু 
+    </div>
+    <div class="word-box" onclick="speakWord('deteriorate')"> 
+      131. deteriorate = আরো খারাপ হওয়া  
+    </div>
+    <div class="word-box" onclick="speakWord('florid')"> 
+      132. florid = উজ্জ্বল বর্ণ
+    </div>
+    <div class="word-box" onclick="speakWord('slight')"> 
+      133. slight = পাতলা  
+    </div>
+    <div class="word-box" onclick="speakWord('audacious')"> 
+      134. audacious = দুঃসাহসী  
+    </div>
+    <div class="word-box" onclick="speakWord('mountebank')"> 
+      135. mountebank = ধাপ্পাবাজ 
+    </div>
+    <div class="word-box" onclick="speakWord('mitigate')"> 
+      136. mitigate = উপশম করা
+    </div>
+    <div class="word-box" onclick="speakWord('diligent')"> 
+      137. diligent = পরিশ্রমী 
+    </div>
+    <div class="word-box" onclick="speakWord('indolent')"> 
+      138. indolent = অলস 
+    </div>
+    <div class="word-box" onclick="speakWord('lethargic')"> 
+      139. lethargic = অলস 
+    </div>
+    <div class="word-box" onclick="speakWord('rummage')"> 
+      140. rummage = তন্ন তন্ন করে খোঁজা 
+    </div>
+    <div class="word-box" onclick="speakWord('conman')"> 
+      141. conman = প্রতারণা করা 
+    </div>
+    <div class="word-box" onclick="speakWord('brainy')"> 
+      142. brainy = মেধাবী 
+    </div>
+    <div class="word-box" onclick="speakWord('prepossessing')"> 
+      143. prepossessing = চিত্তাকর্ষক  
+    </div>
+    <div class="word-box" onclick="speakWord('fickle')"> 
+      144. fickle = খামখেয়ালী 
+    </div>
+    <div class="word-box" onclick="speakWord('profuse')"> 
+      145. profuse = প্রচুর 
+    </div>
+    <div class="word-box" onclick="speakWord('flawless')"> 
+      146. flawless = নিখুত 
+    </div>
+    <div class="word-box" onclick="speakWord('desultory')"> 
+      147. desultory = এলোমেলো  
+    </div>
+    <div class="word-box" onclick="speakWord('cramped')"> 
+      148. cramped = গাদাগাদি 
+    </div>
+    <div class="word-box" onclick="speakWord('conviction')"> 
+      149. conviction = দৃঢ় বিশ্বাস
+    </div>
+    <div class="word-box" onclick="speakWord('eulogy')"> 
+      150. eulogy = প্রশংসা 
+    </div>
+    <div class="word-box" onclick="speakWord('celebrated')"> 
+      151. celebrated = বিখ্যাত 
+    </div>
+    <div class="word-box" onclick="speakWord('polished')"> 
+      152. polished = মার্জিত  
+    </div>
+    <div class="word-box" onclick="speakWord('filthy')"> 
+      153. filthy = নোংরা  
+    </div>
+    <div class="word-box" onclick="speakWord('dormant')"> 
+      154. dormant = সুপ্ত  
+    </div>
+    <div class="word-box" onclick="speakWord('veracity')"> 
+      155. veracity = পেটুকতা
+    </div>
+    <div class="word-box" onclick="speakWord('clamor')"> 
+      156. clamor = হৈচৈ  
+    </div>
+    <div class="word-box" onclick="speakWord('counterfeit')"> 
+      157. counterfeit = জাল/নকল 
+    </div>
+    <div class="word-box" onclick="speakWord('penury')"> 
+      158. penury = দারিদ্র 
+    </div>
+    <div class="word-box" onclick="speakWord('plethora')"> 
+      159. plethora = আধিক্য 
+    </div>
+    <div class="word-box" onclick="speakWord('remarkable')"> 
+      160. remarkable = লক্ষ্যণীয় 
+    </div>
+    <div class="word-box" onclick="speakWord('legitimate')"> 
+      161. legitimate = বৈধ
+    </div>
+    <div class="word-box" onclick="speakWord('authentic')"> 
+      162. authentic = খাঁটি  
+    </div>
+    <div class="word-box" onclick="speakWord('conceited')"> 
+      163. conceited = আত্মঅভিমানী 
+    </div>
+    <div class="word-box" onclick="speakWord('arrogant')"> 
+      164. arrogant = অহংকারী 
+    </div>
+    <div class="word-box" onclick="speakWord('pragmatic')"> 
+      165. pragmatic = বাস্তববাদী  
+    </div>
+    <div class="word-box" onclick="speakWord('void')"> 
+      166. void = শূন্য 
+    </div>
+    <div class="word-box" onclick="speakWord('gloomy')"> 
+      167. gloomy = মন মরা
+    </div>
+    <div class="word-box" onclick="speakWord('cozy')"> 
+      168. cozy = সুখর 
+    </div>
+    <div class="word-box" onclick="speakWord('gay')"> 
+      169. gay = উৎফুল্ল 
+    </div>
+    <div class="word-box" onclick="speakWord('melancholy')"> 
+      170. melancholy = দুঃখপূর্ণ 
+    </div>
+    <div class="word-box" onclick="speakWord('vengeful')"> 
+      171. vengeful = প্রতিহিংসা পরায়ণ 
+    </div>
+    <div class="word-box" onclick="speakWord('laudatory')"> 
+      172. laudatory = প্রশংসাপূণ্ 
+    </div>
+    <div class="word-box" onclick="speakWord('ally')"> 
+      173. ally = মিত্রাবন্ধু  
+    </div>
+    <div class="word-box" onclick="speakWord('conversant')"> 
+      174. conversant = পরিচিত  
+    </div>
+    <div class="word-box" onclick="speakWord('passing')"> 
+      175. passing = ক্ষণস্থায়ী 
+    </div>
+    <div class="word-box" onclick="speakWord('terse')"> 
+      176. terse = সংক্ষিপ্ত 
+    </div>
+    <div class="word-box" onclick="speakWord('allegiance')"> 
+      177. allegiance = অনুগত্য  
+    </div>
+    <div class="word-box" onclick="speakWord('juvenile')"> 
+      178. juvenile = কিশোর 
+    </div>
+    <div class="word-box" onclick="speakWord('advocate')"> 
+      179. advocate = পক্ষে
+    </div>
+    <div class="word-box" onclick="speakWord('counter')"> 
+      180. counter = বিপক্ষে 
+    </div>
+    <div class="word-box" onclick="speakWord('capricious')"> 
+      181. capricious = খামখেয়ালি  
+    </div>
+    <div class="word-box" onclick="speakWord('incoherent')"> 
+      182. incoherent = অসংগতি 
+    </div>
+    <div class="word-box" onclick="speakWord('benevolent')"> 
+      183. benevolent = দয়ালু 
+    </div>
+    <div class="word-box" onclick="speakWord('diverge')"> 
+      184. diverge = আলাদা হওয়া
+    </div>
+    <div class="word-box" onclick="speakWord('colossal')"> 
+      185. colossal = বিশাল 
+    </div>
+    <div class="word-box" onclick="speakWord('insolent')"> 
+      186. insolent = উদ্বত
+    </div>
+    <div class="word-box" onclick="speakWord('dastard')"> 
+      187. dastard = ভীতু
+    </div>
+    <div class="word-box" onclick="speakWord('astute')"> 
+      188. astute = বিচক্ষণ 
+    </div>
+    <div class="word-box" onclick="speakWord('valiant')"> 
+      189. valiant = সাহসী 
+    </div>
+    <div class="word-box" onclick="speakWord('jolly')"> 
+      190. jolly = হাসিখুশি  
+    </div>
+    <div class="word-box" onclick="speakWord('germane')"> 
+      191. germane = প্রাসঙ্গিক 
+    </div>
+    <div class="word-box" onclick="speakWord('absurd')"> 
+      192. absurd = অদ্ভুত/অবিশ্বাস্য
+    </div>
+    <div class="word-box" onclick="speakWord('despicable')"> 
+      193. despicable = ঘৃণ্য 
+    </div>
+    <div class="word-box" onclick="speakWord('sophisticated')"> 
+      194. sophisticated = আধুনিক 
+    </div>
+    <div class="word-box" onclick="speakWord('squander')"> 
+      195. squander = অপচয় করা 
+    </div>
+    <div class="word-box" onclick="speakWord('sober')"> 
+      196. sober = সংকেত  
+    </div>
+    <div class="word-box" onclick="speakWord('orderly')"> 
+      197. orderly = সুবিন্যস্ত 
+    </div>
+    <div class="word-box" onclick="speakWord('capacious')"> 
+      198. capacious = প্রশস্ত 
+    </div>
+    <div class="word-box" onclick="speakWord('surplus')"> 
+      199. surplus = অতিরিক্ত 
+    </div>
+    <div class="word-box" onclick="speakWord('disdain')"> 
+      200. disdain = ঘৃণা করা  
+    </div>
+    <div class="word-box" onclick="speakWord('prompt')"> 
+      201. prompt = তাৎক্ষণিক 
+    </div>
+    <div class="word-box" onclick="speakWord('topple')"> 
+      202. topple = পতন হওয়া
+    </div>
+    <div class="word-box" onclick="speakWord('durable')"> 
+      203. durable = টেকসই
+    </div>
+    <div class="word-box" onclick="speakWord('cramped')"> 
+      204. cramped = আবদ্ধ  
+    </div>
+    <div class="word-box" onclick="speakWord('ascend')"> 
+      205. ascend = আরোহণ করা  
+    </div>
+    <div class="word-box" onclick="speakWord('sour')"> 
+      206. sour = অপ্রীতিকর  
+    </div>
+    <div class="word-box" onclick="speakWord('plebian')"> 
+      207. plebian = ইতর  
+    </div>
+    <div class="word-box" onclick="speakWord('contrived')"> 
+      208. contrived = ফন্দি করা 
+    </div>
+    <div class="word-box" onclick="speakWord('opulence')"> 
+      209. opulence = প্রাচুর্য 
+    </div>
+    <div class="word-box" onclick="speakWord('temporary')"> 
+      210. temporary = অস্থায়ী 
+    </div>
+    <div class="word-box" onclick="speakWord('stationary')"> 
+      211. stationary = স্থির 
+    </div>
+    <div class="word-box" onclick="speakWord('tumble')"> 
+      212. tumble = হোঁচট খাওয়া 
+    </div>
+    <div class="word-box" onclick="speakWord('agile')"> 
+      213. agile = চটপটে 
+    </div>
+    <div class="word-box" onclick="speakWord('scandal')"> 
+      214. scandal = কলঙ্ক  
+    </div>
+    <div class="word-box" onclick="speakWord('pressing')"> 
+      215. pressing = জরুরী 
+    </div>
+    <div class="word-box" onclick="speakWord('abyss')"> 
+      216. abyss = গভীর 
+    </div>
+    <div class="word-box" onclick="speakWord('edgy')"> 
+      217. edgy = খিটখিটে 
+    </div>
+    <div class="word-box" onclick="speakWord('swindler')"> 
+      218. swindler = ছলনাকারী  
+    </div>
+    <div class="word-box" onclick="speakWord('contiguity')"> 
+      219. contiguity = সান্নিধ্য 
+    </div>
+    <div class="word-box" onclick="speakWord('vicinity')"> 
+      220. vicinity = কাছাকাছি  
+    </div>
+    <div class="word-box" onclick="speakWord('desert')"> 
+      221. desert = ফেলে দেয়া 
+    </div>
+    <div class="word-box" onclick="speakWord('relish')"> 
+      222. relish = উপভোগ করা 
+    </div>
+    <div class="word-box" onclick="speakWord('palpable')"> 
+      223. palpable = স্পর্শযোগ্য  
+    </div>
+    <div class="word-box" onclick="speakWord('muddle')"> 
+      224. muddle = তালগোল পাকানো  
+    </div>
+    <div class="word-box" onclick="speakWord('imperceptible')"> 
+      225. imperceptible = বোধগম্য নয় 
+    </div>
+    <div class="word-box" onclick="speakWord('exasperate')"> 
+      226. exasperate = রাগানো 
+    </div>
+    <div class="word-box" onclick="speakWord('formidable')"> 
+      227. formidable = ভীতিকর 
+    </div>
+    <div class="word-box" onclick="speakWord('encomium')"> 
+      228. encomium = প্রশংসা  
+    </div>
+    <div class="word-box" onclick="speakWord('din')"> 
+      229. din = হৈচৈ
+    </div>
+    <div class="word-box" onclick="speakWord('detest')"> 
+      230. detest = ঘৃণা করা 
+    </div>
+    <div class="word-box" onclick="speakWord('fecund')"> 
+      231. fecund = উর্বর 
+    </div>
+    <div class="word-box" onclick="speakWord('malefactor')"> 
+      232. malefactor = ক্ষতিকারক 
+    </div>
+    <div class="word-box" onclick="speakWord('downcast')"> 
+      233. downcast = মনমরা 
+    </div>
+    <div class="word-box" onclick="speakWord('dissent')"> 
+      234. dissent = ভিন্নমত পোষণ করা
+    </div>
+    <div class="word-box" onclick="speakWord('salutary')"> 
+      235. salutary = ক্ষতিকারক 
+    </div>
+    <div class="word-box" onclick="speakWord('rustic')"> 
+      236. rustic = গ্রামীণ  
+    </div>
+    <div class="word-box" onclick="speakWord('promising')"> 
+      237. promising = সম্ভাবনাময় 
+    </div>
+    <div class="word-box" onclick="speakWord('deride')"> 
+      238. deride = উপহাস করা 
+    </div>
+    <div class="word-box" onclick="speakWord('amiss')"> 
+      239. amiss = বৈঠক 
+    </div>
+    <div class="word-box" onclick="speakWord('repel')"> 
+      240. repel = তাড়িয়ে দেওয়া
+    </div>
+    <div class="word-box" onclick="speakWord('eulogize')"> 
+      241. eulogize = প্রশংসা করা 
+    </div>
+    <div class="word-box" onclick="speakWord('disparage')"> 
+      242. disparage = অবমূল্যায়ন করা 
+    </div>
+    <div class="word-box" onclick="speakWord('arid')"> 
+      243. arid = অনুর্বর  
+    </div>
+    <div class="word-box" onclick="speakWord('brag')"> 
+      244. brag = অহংকার  
+    </div>
+    <div class="word-box" onclick="speakWord('commend')"> 
+      245. commend = প্রশংসা করা 
+    </div>
+    <div class="word-box" onclick="speakWord('bonafide')"> 
+      246. bonafide = খাঁটি  
+    </div>
+    <div class="word-box" onclick="speakWord('debacle')"> 
+      247. debacle = ধ্বংস 
+    </div>
+    <div class="word-box" onclick="speakWord('irascible')"> 
+      248. irascible = খিটখিটে  
+    </div>
+    <div class="word-box" onclick="speakWord('hypocrisy')"> 
+      249. hypocrisy = ভন্ডামি  
+    </div>
+    <div class="word-box" onclick="speakWord('merchandise')"> 
+      250. merchandise = পণ্য 
+    </div>
+    <div class="word-box" onclick="speakWord('clandestine')"> 
+      251. clandestine = গুপ্ত 
+    </div>
+    <div class="word-box" onclick="speakWord('biz')"> 
+      252. biz = ব্যবসা 
+    </div>
+    <div class="word-box" onclick="speakWord('obligation')"> 
+      253. obligation = বাধ্যতা  
+    </div>
+    <div class="word-box" onclick="speakWord('treaty')"> 
+      254. treaty = চুক্তি  
+    </div>
+    <div class="word-box" onclick="speakWord('pretender')"> 
+      255. pretender = জোচ্চর
+    </div>
+    <div class="word-box" onclick="speakWord('pique')"> 
+      256. pique = শত্রুতা
+    </div>
+    <div class="word-box" onclick="speakWord('debut')"> 
+      257. debut = প্রথম প্রকাশ
+    </div>
+    <div class="word-box" onclick="speakWord('prima facie')"> 
+      258. prima facie = প্রথম দেখায়
+    </div>
+    <div class="word-box" onclick="speakWord('tedious')"> 
+      259. tedious = একঘেয়ে
+    </div>
+    <div class="word-box" onclick="speakWord('amicable')"> 
+      260. amicable = বন্ধুসুলভ
+    </div>
+    <div class="word-box" onclick="speakWord('vituperate')"> 
+      261. vituperate = গালিগালাজ
+    </div>
+    <div class="word-box" onclick="speakWord('obscure')"> 
+      262. obscure = অস্পষ্ট
+    </div>
+    <div class="word-box" onclick="speakWord('clemency')"> 
+      263. clemency = ক্ষমাশীল
+    </div>
+    <div class="word-box" onclick="speakWord('enhance')"> 
+      264. enhance = বৃদ্ধি করা
+    </div>
+    <div class="word-box" onclick="speakWord('belongings')"> 
+      265. belongings = মালামাল
+    </div>
+    <div class="word-box" onclick="speakWord('pervasiveness')"> 
+      266. pervasiveness = ব্যাপকতা
+    </div>
+    <div class="word-box" onclick="speakWord('repellent')"> 
+      267. repellent = বিরক্তিকর
+    </div>
+    <div class="word-box" onclick="speakWord('reticent')"> 
+      268. reticent = স্বল্পভাষী
+    </div>
+    <div class="word-box" onclick="speakWord('soothing')"> 
+      269. soothing = আরামদায়ক
+    </div>
+    <div class="word-box" onclick="speakWord('obliterate')"> 
+      270. obliterate = ধ্বংস
+    </div>
+    <div class="word-box" onclick="speakWord('tousle')"> 
+      271. tousle = এলোমেলো করা
+    </div>
+    <div class="word-box" onclick="speakWord('laud')"> 
+      272. laud = প্রশংসা করা
+    </div>
+    <div class="word-box" onclick="speakWord('entrepreneur')"> 
+      273. entrepreneur = উদ্যোক্তা
+    </div>
+    <div class="word-box" onclick="speakWord('plunge')"> 
+      274. plunge = ডুবে যাওয়া
+    </div>
+    <div class="word-box" onclick="speakWord('scold')"> 
+      275. scold = বকাঝকা করা
+    </div>
+    <div class="word-box" onclick="speakWord('inept')"> 
+      276. inept = অদক্ষ 
+    </div>
+    <div class="word-box" onclick="speakWord('gauche')"> 
+      277. gauche = আনাড়ি 
+    </div>
+    <div class="word-box" onclick="speakWord('handy')"> 
+      278. handy = পটু  
+    </div>
+    <div class="word-box" onclick="speakWord('salubrious')"> 
+      279. salubrious = স্বাস্থ্যকর 
+    </div>
+    <div class="word-box" onclick="speakWord('engender')"> 
+      280. engender = উৎপাদন করা
+    </div>
+    <div class="word-box" onclick="speakWord('evident')"> 
+      281. evident = স্পষ্ট  
+    </div>
+    <div class="word-box" onclick="speakWord('distinct')"> 
+      282. distinct = স্বতন্ত্র  
+    </div>
+    <div class="word-box" onclick="speakWord('cryptic')"> 
+      283. cryptic = গুপ্ত 
+    </div>
+    <div class="word-box" onclick="speakWord('muse')"> 
+      284. muse = ধ্যানে মগ্ন থাকা 
+    </div>
+    <div class="word-box" onclick="speakWord('overlook')"> 
+      285. overlook = এড়িয়ে যাওয়া 
+    </div>
+    <div class="word-box" onclick="speakWord('obscure')"> 
+      286. obscure = ঝাপসা 
+    </div>
+    <div class="word-box" onclick="speakWord('exorbitant')"> 
+      287. exorbitant = অত্যাধিক 
+    </div>
+    <div class="word-box" onclick="speakWord('elated')"> 
+      288. elated = আনন্দিত 
+    </div>
+    <div class="word-box" onclick="speakWord('dejected')"> 
+      289. dejected = মনমরা 
+    </div>
+    <div class="word-box" onclick="speakWord('asinine')"> 
+      290. asinine = নির্বোধ 
+    </div>
+    <div class="word-box" onclick="speakWord('hostile')"> 
+      291. hostile = প্রতিকূল 
+    </div>
+    <div class="word-box" onclick="speakWord('anomaly')"> 
+      292. anomaly = এলোমেলো 
+    </div>
+    <div class="word-box" onclick="speakWord('debonair')"> 
+      293. debonair = হাসিখুশি 
+    </div>
+    <div class="word-box" onclick="speakWord('enervate')"> 
+      294. enervate = মানসিকভাবে দুর্বল করা 
+    </div>
+    <div class="word-box" onclick="speakWord('construe')"> 
+      295. construe = ব্যাখ্যা করা
+    </div>
+  </div>    
+    
+    
+
+<script>
+    function speakWord(word) {
+        let utterance = new SpeechSynthesisUtterance();
+        utterance.text = word;
+        utterance.lang = 'en-US';
+        window.speechSynthesis.speak(utterance);
+    }
+
+    let words = [];  // To store words from the file
+        let currentIndex = 0;
+        let wordInterval;
+        let startIndex = 0;
+        let endIndex = 0;
+
+        // Function to fetch the file and split its contents into words
+        async function fetchWords() {
+            try {
+                const response = await fetch('word1.txt');
+                const text = await response.text(); // Get the text content from the file
+                words = text.split(/\r?\n/); // Split the content by newlines into an array
+            } catch (error) {
+                console.error("Error fetching file:", error);
+            }
+        }
+
+        // Function to say the word aloud using Web Speech API
+        function sayWord(word) {
+            const utterance = new SpeechSynthesisUtterance(word);
+            speechSynthesis.speak(utterance);
+        }
+
+        // Function to display the words one by one and speak them
+        function displayWord() {
+            if (currentIndex <= endIndex && currentIndex < words.length) {
+                const word = words[currentIndex];
+                document.getElementById('wordDisplay').innerText = word;
+                sayWord(word);  // Say the word
+                currentIndex++;
+            } else {
+                clearInterval(wordInterval); // Stop when all words are displayed
+            }
+        }
+
+        // Function to stop the display and speech
+        function stopWords() {
+            clearInterval(wordInterval);  // Stop the interval
+            speechSynthesis.cancel();  // Stop any ongoing speech synthesis
+        }
+
+        // Event listener for the "Try Yourself" button
+        document.getElementById('tryBtn').addEventListener('click', async function() {
+            startIndex = parseInt(document.getElementById('startIndex').value) - 1;
+            endIndex = parseInt(document.getElementById('endIndex').value) - 1;
+            currentIndex = startIndex;
+            clearInterval(wordInterval);
+            await fetchWords(); // Fetch the words from the file before starting
+            if (words.length > 0 && startIndex >= 0 && endIndex < words.length && startIndex <= endIndex) {
+                wordInterval = setInterval(displayWord, 3000); // Display and say words every 5 seconds
+            } else {
+                alert("Please enter valid start and end indices.");
+            }
+        });
+
+        // Event listener for the "Stop" button
+        document.getElementById('stopBtn').addEventListener('click', function() {
+            stopWords();  // Stop the word display and speech
+        });
+</script>
+
+</body>
+</html>
+
