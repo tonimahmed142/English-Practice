@@ -1024,16 +1024,26 @@
             }
         }
 
-        // Function to say the word aloud using Web Speech API
-        function sayWord(word) {
-            const utterance = new SpeechSynthesisUtterance(word);
-            const voices = speechSynthesis.getVoices();
-            if (voices.length === 0) {
-                speechSynthesis.onvoiceschanged = () => {
-                    speechSynthesis.speak(utterance);
-                };
-            } else {
-                speechSynthesis.speak(utterance);
+        // Function to call the RapidAPI endpoint and play the audio
+        async function sayWord(word) {
+            const url = 'https://ai-girlfriend-voice.p.rapidapi.com/voice/uSzdvXL4Y6qlmK67czv7/preview';
+            const options = {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json',
+                    'x-rapidapi-host': 'ai-girlfriend-voice.p.rapidapi.com',
+                    'x-rapidapi-key': '0b9d7c22dbmshe00627f99996531p12e782jsnc95ac4cdb797'
+                },
+                body: JSON.stringify({ text: word })
+            };
+
+            try {
+                const response = await fetch(url, options);
+                const data = await response.json();
+                const audio = new Audio(data.audioUrl);
+                audio.play();
+            } catch (error) {
+                console.error("Error with speech synthesis:", error);
             }
         }
 
@@ -1042,7 +1052,7 @@
             if (currentIndex <= endIndex && currentIndex < words.length) {
                 const word = words[currentIndex];
                 document.getElementById('wordDisplay').innerText = word;
-                sayWord(word);  // Say the word
+                sayWord(word);  // Say the word using RapidAPI
                 currentIndex++;
             } else {
                 clearInterval(wordInterval); // Stop when all words are displayed
@@ -1052,7 +1062,6 @@
         // Function to stop the display and speech
         function stopWords() {
             clearInterval(wordInterval);  // Stop the interval
-            speechSynthesis.cancel();  // Stop any ongoing speech synthesis
         }
 
         // Event listener for the "Try Yourself" button
