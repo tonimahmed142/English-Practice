@@ -28,6 +28,9 @@
           width: 100%;
           margin-top: 20px;
         }
+        .common{
+          color: #ff0000;
+        }
         button{
           margin: 10px;
           padding:20px;
@@ -38,7 +41,7 @@
           border: none;
         }
         button:hover {
-background-color: aquamarine;
+          background-color: aquamarine;
         }
         .wordDisplay {
           font-size: 30px;
@@ -66,7 +69,6 @@ background-color: aquamarine;
           justify-content: center;
           
         }
-
         .word-box {
             display: inline-block;
             text-transform: capitalize;
@@ -78,7 +80,7 @@ background-color: aquamarine;
             margin: 10px;
             width: 200px;
         }
-                .word-box:active{
+        .word-box:active{
           background-color: #646464;
         }
         p{
@@ -95,11 +97,11 @@ background-color: aquamarine;
 <div class="count">
     <div class="count-item1">
       <label for="startIndex">Input start number:</label>
-      <input placeholder="First number" type="number" id="startIndex" min="1" max="1199" value="1">
+      <input placeholder="First number" type="number" id="startIndex" min="1" max="1199" value="296">
     </div>
     <div class="count-item2">
       <label for="endIndex">Input end number:</label>
-      <input placeholder="Last number" type="number" id="endIndex" min="2" max="1200" value="20">
+      <input placeholder="Last number" type="number" id="endIndex" min="2" max="1200" value="315">
     </div>
 </div>
     </div>
@@ -722,8 +724,9 @@ background-color: aquamarine;
     <div class="word-box" onclick="speakWord('durable')"> 
       203. durable = টেকসই
     </div>
-    <div class="word-box" onclick="speakWord('cramped')"> 
+    <div class="word-box common" onclick="speakWord('cramped')"> 
       204. cramped = আবদ্ধ  
+      <p>//common word</p>
     </div>
     <div class="word-box" onclick="speakWord('ascend')"> 
       205. ascend = আরোহণ করা  
@@ -968,8 +971,9 @@ background-color: aquamarine;
     <div class="word-box" onclick="speakWord('overlook')"> 
       285. overlook = এড়িয়ে যাওয়া 
     </div>
-    <div class="word-box" onclick="speakWord('obscure')"> 
+    <div class="word-box common" onclick="speakWord('obscure')"> 
       286. obscure = ঝাপসা 
+      <p>//common word</p>
     </div>
     <div class="word-box" onclick="speakWord('exorbitant')"> 
       287. exorbitant = অত্যাধিক 
@@ -998,6 +1002,69 @@ background-color: aquamarine;
     <div class="word-box" onclick="speakWord('construe')"> 
       295. construe = ব্যাখ্যা করা
     </div>
+    <div class="word-box" onclick="speakWord('panegyric')"> 
+      296. panegyric = ব্যপক প্রশংসা
+    </div>
+    <div class="word-box" onclick="speakWord('fantasy')"> 
+      297. fantasy = কল্পনা
+    </div>
+    <div class="word-box" onclick="speakWord('foil')"> 
+      298. foil = ব্যর্থ করা
+    </div>
+    <div class="word-box" onclick="speakWord('elucidate')"> 
+      299. elucidate = ব্যাখ্যা করা
+    </div>
+    <div class="word-box" onclick="speakWord('nonplus')"> 
+      300. nonplus = হতবুদ্ধি করা
+    </div>
+    <div class="word-box" onclick="speakWord('perennial')"> 
+      301. perennial = চিরস্থায়ী
+    </div>
+    <div class="word-box common" onclick="speakWord('desultory')"> 
+      302. desultory = উদ্দেশ্যহীন
+      <p>//common word</p>
+    </div>
+    <div class="word-box" onclick="speakWord('ephemeral')"> 
+      303. ephemeral = ক্ষণস্থায়ী
+    </div>
+    <div class="word-box common" onclick="speakWord('dastard')"> 
+      304. dastard = কাপুরুষ
+      <p>//common word</p>
+    </div>
+    <div class="word-box" onclick="speakWord('conglomeration')"> 
+      305. conglomeration = একত্রিত করা
+    </div>
+    <div class="word-box" onclick="speakWord('disperse')"> 
+      306. disperse = ছড়িয়ে দেওয়া
+    </div>
+    <div class="word-box" onclick="speakWord('content')"> 
+      307. content = সন্তুষ্ট
+    </div>
+    <div class="word-box" onclick="speakWord('heavenly')"> 
+      308. heavenly = পরলোক
+    </div>
+    <div class="word-box" onclick="speakWord('vapid')"> 
+      309. vapid = স্বাদহীন
+    </div>
+    <div class="word-box" onclick="speakWord('banal')"> 
+      310. banal = একঘেয়ে
+    </div>
+    <div class="word-box" onclick="speakWord('crestfallen')"> 
+      311. crestfallen = মনমরা
+    </div>
+    <div class="word-box" onclick="speakWord('accolade')"> 
+      312. accolade = সম্মান করা
+    </div>
+    <div class="word-box" onclick="speakWord('avid')"> 
+      313. avid = উৎসুক
+    </div>
+    <div class="word-box" onclick="speakWord('half-hearted')"> 
+      314. half-hearted = ভীতু
+    </div>
+    <div class="word-box" onclick="speakWord('humble')"> 
+      315. humble = বিনয়ী
+    </div>
+    
   </div>    
     
     
@@ -1019,7 +1086,7 @@ background-color: aquamarine;
         // Function to fetch the file and split its contents into words
         async function fetchWords() {
             try {
-                const response = await fetch('word1.txt');
+                const response = await fetch('words.txt');
                 const text = await response.text(); // Get the text content from the file
                 words = text.split(/\r?\n/); // Split the content by newlines into an array
             } catch (error) {
