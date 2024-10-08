@@ -1086,7 +1086,7 @@
         // Function to fetch the file and split its contents into words
         async function fetchWords() {
             try {
-                const response = await fetch('words.txt');
+                const response = await fetch('word1.txt');
                 const text = await response.text(); // Get the text content from the file
                 words = text.split(/\r?\n/); // Split the content by newlines into an array
             } catch (error) {
